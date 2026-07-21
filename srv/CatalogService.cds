@@ -24,7 +24,15 @@ service CatalogService @(path:'/CatalogService') {
             when 'X' then 1
             when 'P' then 2
             else 0
-        end as Spiderman: Integer
+        end as Spiderman: Integer,
+        case OVERALL.STATUS
+            when 'A' then 'Approved'
+            when 'D' then 'Delivered'
+            when 'X' then 'Cancelled'
+            when 'P' then 'Pending'
+            else 'Unknown'
+        end as Description: String(10)
+
     }
 
   
