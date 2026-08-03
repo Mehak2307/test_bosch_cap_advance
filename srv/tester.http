@@ -8,7 +8,24 @@ http://localhost:4004/CatalogService/$metadata
 
 
 ### GET All employees
+# http://localhost:4004/CatalogService/EmployeeSet
+# Authorization: Basic saranya:1234
 http://localhost:4004/CatalogService/EmployeeSet
+Authorization: Basic saranya:1234
+
+
+### Create a new Employee
+POST http://localhost:4004/CatalogService/EmployeeSet
+Authorization: Basic pallavi:1234
+Content-Type: application/json
+
+{
+  "nameFirst": "Cristiano",
+  "nameLast": "Ronaldo",
+  "bankName": "My Bank of San Francisco",
+  "salaryAmount":500000,
+  "Currency_code":"USD"
+}
 
 
 ### Get Single employee by ID
